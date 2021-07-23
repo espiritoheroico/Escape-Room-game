@@ -8,14 +8,10 @@ public class Cam_Player_Controller : MonoBehaviour
     [SerializeField] float inputX, inputY; //input controls
     [SerializeField] float mouseX, mouseY;
     [SerializeField] float sensibility = 100;
-    [SerializeField] float rotationX, rotationY,maxdis,lenghtcast;
+    [SerializeField] float rotationX, rotationY;
     float dtime;
-    //raycast to objects
-    RaycastHit rh;
-    [SerializeField] Color raycastColor = Color.red;
     [SerializeField] public Transform body;
     [SerializeField] GameObject target;
-    [SerializeField] LayerMask layer;
     #endregion
 
     void Update()
@@ -31,13 +27,5 @@ public class Cam_Player_Controller : MonoBehaviour
         transform.localRotation = Quaternion.Euler(new Vector3(rotationY, 0, 0));
         body.Rotate(Vector3.up * mouseX);
         //enable Raycast
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        //create a ray(raycast)
-        if(Physics.Raycast(transform.position,fwd*lenghtcast,out rh, maxdis, layer))
-        {
-            target = rh.collider.gameObject;
-        }
-        //debug ray on gizmoz
-        Debug.DrawRay(transform.position, fwd * lenghtcast, raycastColor);
     }
 }

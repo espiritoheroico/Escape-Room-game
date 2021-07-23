@@ -105,7 +105,7 @@ namespace GameManager
             ct = this.gameObject.AddComponent<CountTimer>();
             ct.timestate = CountTimer.ts.run;
             gamePlayedTime = ct.countTimer;
-            StateController.State = StateController.gameStates.UI;
+            //StateController.State = StateController.gameStates.UI;
         }
 
         void Update()
@@ -130,7 +130,6 @@ namespace GameManager
                     canvas_HUD.SetActive(true);
                     canvas_UI.SetActive(false);
                     canvas_INVENTARY.SetActive(false);
-                    canvas_PUZZLE.SetActive(false);
                     UniversalGameTimer.UST = UniversalGameTimer.universalTimeStates.stop;
                     Cursor.lockState = CursorLockMode.None;
                     break;
@@ -138,14 +137,12 @@ namespace GameManager
                     canvas_HUD.SetActive(false);
                     canvas_UI.SetActive(true);
                     canvas_INVENTARY.SetActive(false);
-                    canvas_PUZZLE.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
                     break;
                 case StateController.gameStates.directorsCut:
                     canvas_HUD.SetActive(false);
                     canvas_UI.SetActive(false);
                     canvas_INVENTARY.SetActive(false);
-                    canvas_PUZZLE.SetActive(false);
                     UniversalGameTimer.UST = UniversalGameTimer.universalTimeStates.stop;
                     Cursor.lockState = CursorLockMode.None;
                     break;
@@ -153,14 +150,12 @@ namespace GameManager
                     canvas_HUD.SetActive(false);
                     canvas_UI.SetActive(false);
                     canvas_INVENTARY.SetActive(true);
-                    canvas_PUZZLE.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
                     break;
                 case StateController.gameStates.puzzle:
                     canvas_HUD.SetActive(false);
                     canvas_UI.SetActive(false);
                     canvas_INVENTARY.SetActive(false);
-                    canvas_PUZZLE.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
                     break;
                 default:
