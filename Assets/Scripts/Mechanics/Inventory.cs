@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory
 {
     private List<Item> itemlist;
-    int maxslots
+    int maxslots = 12;
 
     public Inventory()
     {

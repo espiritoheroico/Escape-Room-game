@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
+[CreateAssetMenu( fileName = "Item_pref", menuName = "INVENTORY/item")]
+public class Item : ScriptableObject
 {
+    public string itemID;
     public string itemname;
     public Sprite itemsprite;
+    public string itemdescription;
 }
