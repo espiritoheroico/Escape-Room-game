@@ -1,4 +1,6 @@
 # Escape-Room
+
+![Screenshot_1](https://user-images.githubusercontent.com/37461995/126856138-2b71b7fa-671c-42aa-803b-9a896d17c0b9.png)
  
  XCAPE 2 XPACE
 Estilo : Jogo no estilo ESCAPE ROOM/sobrevivência
@@ -30,3 +32,5 @@ Botão direito do mouse = Ligar/Desligar a lanterna
 O jogo vai possuir inventario onde você vai guardar suas chaves e itens para realizar tarefas e para expandir o jogo futuramente
 
 Todos os Assets foram criados por mim
+
+![BASE](https://user-images.githubusercontent.com/37461995/126856143-9db2258f-a067-4ba3-9d13-7089e2505260.png)
